@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Yireo SystemInfo-module for Magento 
+ *
+ * @package     Yireo_SystemInfo
+ * @author      Yireo (http://www.yireo.com/)
+ * @copyright   Copyright (c) 2013 Yireo (http://www.yireo.com/)
+ * @license     Open Software License
+ */
+-->
+<config>
+    <modules>
+        <Yireo_SystemInfo>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Yireo_SystemInfo>
+    </modules>
+</config>

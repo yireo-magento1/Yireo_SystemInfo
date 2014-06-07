@@ -1,0 +1,73 @@
+<?php
+/**
+ * SystemInfo extension for Magento 
+ *
+ * @package     Yireo_SystemInfo
+ * @author      Yireo (http://www.yireo.com/)
+ * @copyright   Copyright (c) 2013 Yireo (http://www.yireo.com/)
+ * @license     Open Source License
+ */
+?>
+
+<div class="columns ">
+
+<div class="side-col" id="page:left">
+<?php echo $this->getMenu(); ?>
+</div>
+
+<div class="main-col" id="content">
+<div class="main-col-inner">
+
+<div class="content-header">
+<table cellspacing="0">
+	<tr>
+		<td><h3 class="icon-head head-tag"><?php echo $this->getHeader('Overview'); ?></h3></td>
+	</tr>
+</table>
+</div>
+
+<div class="entry-edit">
+    <div class="entry-edit-head">
+        <h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__('Overview'); ?></h4>
+    </div>
+    <div class="fieldset ">
+        <table cellspacing="5" class="form-list">
+        <tbody>
+            <tr>
+                <td width="300">PHP version</td>
+                <td><?php echo $this->getPhpVersion(); ?></td>
+            </tr>
+            <?php if(function_exists('apache_get_version')): ?>
+            <tr>
+                <td width="300">Webserver version</td>
+                <td><?php echo $this->getWebserverVersion(); ?></td>
+            </tr>
+            <?php endif; ?>
+            <tr>
+                <td width="300">PHP memory</td>
+                <td><?php echo ini_get('memory_limit'); ?></td>
+            </tr>
+            <tr>
+                <td width="300">hash module</td>
+                <td><?php echo $this->getModuleResult('hash'); ?></td>
+            </tr>
+            <tr>
+                <td width="300">APC module</td>
+                <td><?php echo $this->getModuleResult('apc'); ?></td>
+            </tr>
+            <tr>
+                <td width="300">DOM module</td>
+                <td><?php echo $this->getModuleResult('dom'); ?></td>
+            </tr>
+            <tr>
+                <td width="300">SOAP module</td>
+                <td><?php echo $this->getModuleResult('soap'); ?></td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+
+</div>
+</div>
+</div>

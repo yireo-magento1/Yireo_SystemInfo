@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Yireo SystemInfo for Magento 
+ *
+ * @package     Yireo_SystemInfo
+ * @author      Yireo (http://www.yireo.com/)
+ * @copyright   Copyright (C) 2014 Yireo (http://www.yireo.com/)
+ * @license     Open Source License (OSL v3)
+ */
+-->
+<config>
+
+    <modules>
+        <Yireo_SystemInfo>
+            <version>1.0.9</version>
+        </Yireo_SystemInfo>
+    </modules>
+
+    <global>
+
+        <blocks>
+            <systeminfo>
+                <class>Yireo_SystemInfo_Block</class>
+            </systeminfo>
+        </blocks>
+
+        <helpers>
+            <systeminfo>
+                <class>Yireo_SystemInfo_Helper</class>
+            </systeminfo>
+        </helpers>
+
+        <models>
+            <systeminfo>
+                <class>Yireo_SystemInfo_Model</class>
+            </systeminfo>
+        </models>
+
+	</global>
+
+    <adminhtml>
+        <menu>
+             <system>
+                <children>
+                    <tools>
+                        <children>
+                            <systeminfo translate="title" module="systeminfo">
+                                <title>System Information</title>
+                                <action>systeminfo/index/index</action>
+                            </systeminfo>
+                        </children>
+                    </tools>
+                </children>
+             </system>
+        </menu>
+        <translate>
+            <modules>
+                <Yireo_SystemInfo>
+                    <files>
+                        <default>Yireo_SystemInfo.csv</default>
+                    </files>
+                </Yireo_SystemInfo>
+            </modules>
+        </translate>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <systeminfo translate="title" module="systeminfo">
+                                            <title>SystemInfo Section</title>
+                                        </systeminfo>
+                                    </children>
+                                </config>
+                                <tools>
+                                    <children>
+                                        <systeminfo translate="title" module="systeminfo">
+                                            <title>SystemInfo</title>
+                                        </systeminfo>
+                                    </children>
+                                </tools>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+
+    <admin>
+        <routers>
+            <systeminfo>
+                <use>admin</use>
+                <args>
+                    <module>Yireo_SystemInfo</module>
+                    <frontName>systeminfo</frontName>
+                </args>
+            </systeminfo>
+        </routers>
+    </admin>
+
+</config>

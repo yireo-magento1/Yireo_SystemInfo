@@ -1,0 +1,49 @@
+<?php
+/**
+ * SystemInfo extension for Magento 
+ *
+ * @package     Yireo_SystemInfo
+ * @author      Yireo (http://www.yireo.com/)
+ * @copyright   Copyright (c) 2013 Yireo (http://www.yireo.com/)
+ * @license     Open Source License
+ */
+?>
+
+<style>
+div.fieldset table {
+    background-color: white;
+    border: 1px solid #808080;
+    padding: 10px;
+    width: 100%;
+}
+td.e {
+    width: 220px;
+}
+</style>
+
+<div class="columns ">
+
+<div class="side-col" id="page:left">
+<?php echo $this->getMenu(); ?>
+</div>
+
+<div class="main-col" id="content">
+<div class="main-col-inner">
+
+<div class="content-header">
+<table cellspacing="0">
+	<tr>
+		<td><h3 class="icon-head head-tag"><?php echo $this->getHeader('PHP Information'); ?></h3></td>
+	</tr>
+</table>
+</div>
+
+<div class="entry-edit">
+    <div class="entry-edit-head">
+        <h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__('PHP Information'); ?></h4>
+    </div>
+    <div class="fieldset">
+        <?php echo $this->getPhpInformation(); ?>
+    </div>
+</div>
+

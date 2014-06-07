@@ -1,0 +1,67 @@
+<?php
+/**
+ * SystemInfo extension for Magento 
+ *
+ * @package     Yireo_SystemInfo
+ * @author      Yireo (http://www.yireo.com/)
+ * @copyright   Copyright (c) 2013 Yireo (http://www.yireo.com/)
+ * @license     Open Source License
+ */
+?>
+
+<div class="columns ">
+
+<div class="side-col" id="page:left">
+<?php echo $this->getMenu(); ?>
+</div>
+
+<div class="main-col" id="content">
+<div class="main-col-inner">
+
+<div class="content-header">
+<table cellspacing="0">
+	<tr>
+		<td><h3 class="icon-head head-tag"><?php echo $this->getHeader('Overrides'); ?></h3></td>
+	</tr>
+</table>
+</div>
+
+<?php $types = array('blocks', 'models', 'helpers'); ?>
+<?php foreach($types as $type) : ?>
+<?php $overrides = $this->getOverrides($type); ?>
+<div class="entry-edit">
+    <div class="entry-edit-head">
+        <h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__(ucfirst($type).' Overrides'); ?></h4>
+    </div>
+    <div class="grid">
+        <?php if(!empty($overrides)) : ?>
+            <table class="data">
+            <thead>
+                <tr class="headings">
+                    <th style="width:40%"><?php echo $this->__('Reference'); ?></th>
+                    <th style="width:60%"><?php echo $this->__('Class'); ?></th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php $i = 0; ?>
+            <?php foreach($overrides as $override) : ?>
+                <?php $class = ($i % 2 == 1) ? 'odd' : 'even'; ?>
+                <tr class="<?php echo $class; ?>">
+                    <td><?php echo $override['reference']; ?></td>
+                    <td><?php echo (string)$override['node'][0]; ?></td>
+                </tr>
+                <?php $i++; ?>
+            <?php endforeach; ?>
+            </tbody>
+            </table>
+        <?php else: ?>
+            <p><?php echo $this->__('No overrides found'); ?></p>
+        <?php endif; ?>
+    </div>
+</div>
+<p>&nbsp;</p>
+<?php endforeach; ?>
+
+</div>
+</div>
+</div>

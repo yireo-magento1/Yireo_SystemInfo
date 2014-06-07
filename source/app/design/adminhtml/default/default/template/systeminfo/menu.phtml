@@ -1,0 +1,20 @@
+<?php
+/**
+ * SystemInfo extension for Magento 
+ *
+ * @package     Yireo_SystemInfo
+ * @author      Yireo (http://www.yireo.com/)
+ * @copyright   Copyright (c) 2013 Yireo (http://www.yireo.com/)
+ * @license     Open Source License
+ */
+?>
+<ul id="system_config_tabs" class="tabs config-tabs">
+<li>
+    <dl>
+    <dt class="label">Menu</dt>
+    <?php foreach($this->getMenuItems() as $item) { ?>
+    <dd><a href="<?php echo $item['url']; ?>" class="<?php echo $item['class']; ?>"><span><?php echo $item['title']; ?></span></a></dd>
+    <?php } ?>
+    </dl>
+</li>
+</ul>
