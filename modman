@@ -1,0 +1,4 @@
+# Modman file
+source/app/code/community/Yireo/SystemInfo app/code/community/Yireo/SystemInfo
+source/app/etc/modules/Yireo_SystemInfo.xml app/etc/modules/
+source/app/design/adminhtml/default/default/template/* app/design/adminhtml/default/default/template/
