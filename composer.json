@@ -2,8 +2,8 @@
     "name": "yireo/yireo_systeminfo",
     "license": "OSL-3.0",
     "type": "magento-module",
-    "homepage": "https://www.yireo.com/software/magento-extensions/webp",
-    "description": "Add WebP image support to your Magento pages",
+    "homepage": "https://www.yireo.com/software/magento-extensions/systeminfo",
+    "description": "Display useful system information in Magento backend",
     "keywords":[ "composer-installer", "magento"],
     "authors": [
         {
