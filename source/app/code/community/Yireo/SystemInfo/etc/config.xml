@@ -47,7 +47,7 @@
                         <children>
                             <systeminfo translate="title" module="systeminfo">
                                 <title>System Information</title>
-                                <action>systeminfo/index/index</action>
+                                <action>adminhtml/systeminfo/index</action>
                             </systeminfo>
                         </children>
                     </tools>
@@ -93,13 +93,13 @@
 
     <admin>
         <routers>
-            <systeminfo>
-                <use>admin</use>
+            <adminhtml>
                 <args>
-                    <module>Yireo_SystemInfo</module>
-                    <frontName>systeminfo</frontName>
+                    <modules>
+                        <systeminfo after="Mage_Adminhtml">Yireo_SystemInfo</systeminfo>
+                    </modules>
                 </args>
-            </systeminfo>
+            </adminhtml>
         </routers>
     </admin>
 

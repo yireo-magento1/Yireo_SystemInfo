@@ -10,7 +10,7 @@
 
 class Yireo_SystemInfo_Block_Menu extends Mage_Core_Block_Template
 {
-    /*
+    /**
      * Constructor method
      */
     public function _construct()
@@ -19,7 +19,7 @@ class Yireo_SystemInfo_Block_Menu extends Mage_Core_Block_Template
         $this->setTemplate('systeminfo/menu.phtml');
     }
 
-    /*
+    /**
      * Helper method to get a list of the menu-items
      */
     public function getMenuItems()
@@ -55,7 +55,7 @@ class Yireo_SystemInfo_Block_Menu extends Mage_Core_Block_Template
                 $item['class'] = 'inactive';
             }
         
-            $item['url'] = $url->getUrl('systeminfo/index/'.$item['action']);
+            $item['url'] = $url->getUrl('adminhtml/systeminfo/'.$item['action']);
 
             $items[$index] = $item;
         }

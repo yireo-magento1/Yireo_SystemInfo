@@ -10,7 +10,7 @@
 
 class Yireo_SystemInfo_Block_Overrides extends Mage_Adminhtml_Block_Widget_Container
 {
-    /*
+    /**
      * Constructor method
      */
     public function _construct()
@@ -19,7 +19,7 @@ class Yireo_SystemInfo_Block_Overrides extends Mage_Adminhtml_Block_Widget_Conta
         parent::_construct();
     }
 
-    /*
+    /**
      * Helper to return the header of this page
      */
     public function getHeader($title = null)
@@ -27,7 +27,7 @@ class Yireo_SystemInfo_Block_Overrides extends Mage_Adminhtml_Block_Widget_Conta
         return 'System Information - '.$this->__($title);
     }
 
-    /*
+    /**
      * Helper to return the menu
      */
     public function getMenu()
@@ -35,7 +35,7 @@ class Yireo_SystemInfo_Block_Overrides extends Mage_Adminhtml_Block_Widget_Conta
         return $this->getLayout()->createBlock('systeminfo/menu')->toHtml();
     }
 
-    /*
+    /**
      * Return a list of all the existing overrides
      */
     protected function getOverrides($type = null)
